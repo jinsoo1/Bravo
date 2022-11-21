@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+
+    <color name="redPrimary">#EB5757</color>
+    <color name="blackPrimary">#1F2F3A</color>
+    <color name="greenPrimary">#8CC29F</color>
+    <color name="primaryGhost">#7B9CB5</color>
+
+    <color name="color_kakao">#FEE500</color>
+
+    <!-- black&white -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="black_50">#80000000</color>
+    <color name="black_2929">#292929</color>
+    <color name="black_1919">#191919</color>
+    <color name="black_0909">#090909</color>
+
+    <!-- grey -->
+    <color name="grey_7d7d">#7D7D7D</color>
+    <color name="grey_c4c4">#C4C4C4</color>
+    <color name="grey_f6f6">#F6F6F6</color>
+    <color name="grey_d9d9">#D9D9D9</color>
+    <color name="grey_8082">#808281</color>
+    <color name="grey_eaea">#EAEAEA</color>
+    <color name="grey_9999">#999999</color>
+    <color name="grey_6666">#666666</color>
+    <color name="grey_8888">#888888</color>
+    <color name="grey_bbbb">#BBBBBB</color>
+
+    <!-- green -->
+    <color name="green_009C">#009C47</color>
+    <color name="green_40C5">#40C579</color>
+    <color name="green_97DE">#40C579</color>
+    <color name="green_DCF5">#DCF5E7</color>
+    <color name="green_B5E9">#B5E9CB</color>
+    <color name="green_00B6">#00B653</color>
+    <color name="green_2189">#218958</color>
+    <color name="green_51C2">#51C2BA</color>
+    <color name="green_61C9">#61C9B3</color>
+    <color name="green_50C3">#50C3BF</color>
+    <color name="green_3699">#369990</color>
+    <color name="green_D0FA">#D0FAE3</color>
+
+    <!-- yellow-->
+    <color name="yellow_F9F8">#F9F8F4</color>
+    <color name="yellow_FFFD">#FFFDF3</color>
+    <color name="yellow_FDF5">#FDF5C0</color>
+    <color name="yellow_FEFB">#FEFBE5</color>
+    <color name="yellow_FFF0">#FFF0CB</color>
+
+    <color name="pink_FFED">#FFEDF0</color>
+    <color name="yellow_FFFB">#FFFBD7</color>
+    <color name="background_home">#FFFDF3</color>
+
+    <color name="blue_4372">#4372FF</color>
+
+</resources>

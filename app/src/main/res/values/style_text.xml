@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextRegular" parent="Widget.AppCompat.TextView">
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textColor">@color/blackPrimary</item>
+    </style>
+
+    <style name="TextMedium" parent="Widget.AppCompat.TextView">
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textColor">@color/blackPrimary</item>
+    </style>
+
+    <style name="TextBold" parent="Widget.AppCompat.TextView">
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="android:textColor">@color/blackPrimary</item>
+    </style>
+
+    <!-- Regular -->
+    <style name="TextRegular.12">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="TextRegular.14">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="TextRegular.16">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="TextRegular.20">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="TextRegular.24">
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="TextRegular.32">
+        <item name="android:textSize">32sp</item>
+    </style>
+
+    <style name="TextRegular.48">
+        <item name="android:textSize">48sp</item>
+    </style>
+
+    <!-- Medium -->
+    <style name="TextMedium.12">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="TextMedium.14">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="TextMedium.16">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="TextMedium.20">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="TextMedium.24">
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="TextMedium.32">
+        <item name="android:textSize">32sp</item>
+    </style>
+
+    <style name="TextMedium.48">
+        <item name="android:textSize">48sp</item>
+    </style>
+
+    <!-- Bold -->
+    <style name="TextBold.12">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="TextRegular.12.GhostPrimary">
+        <item name="android:textColor">@color/black</item>
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
+    <style name="TextBold.14">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="TextBold.16">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="TextBold.20">
+        <item name="android:textSize">16dp</item>
+        <item name="android:fontFamily">@font/poppins_bold</item>
+    </style>
+
+    <style name="TextBold.20.GhostPrimary">
+        <item name="android:textColor">@color/primaryGhost</item>
+    </style>
+
+    <style name="TextBold.24">
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="TextBold.32">
+        <item name="android:textSize">32sp</item>
+    </style>
+
+    <style name="TextBold.48">
+        <item name="android:textSize">48sp</item>
+    </style>
+
+    <dimen name="text28">28dp</dimen>
+
+</resources>
