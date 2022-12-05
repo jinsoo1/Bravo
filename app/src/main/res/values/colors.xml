@@ -11,7 +11,8 @@
     <color name="greenPrimary">#8CC29F</color>
     <color name="primaryGhost">#7B9CB5</color>
 
-    <color name="color_kakao">#FEE500</color>
+    <color name="color_kakao">#FAF000</color>
+    <color name="color_naver">#29C93D</color>
 
     <!-- black&white -->
     <color name="white">#FFFFFF</color>
@@ -59,5 +60,20 @@
     <color name="background_home">#FFFDF3</color>
 
     <color name="blue_4372">#4372FF</color>
+
+
+    <!-- bravo 색상 -->
+    <color name="purple_6e32">#6E32FF</color>
+    <color name="purple_b496">#B496FF</color>
+    <color name="purple_5021">#5021C1</color>
+
+
+    <color name="green_0c85">#0CB56E</color>
+    <color name="green_37bc">#37BC7C</color>
+
+    <color name="black_1616">#161616</color>
+    <color name="grey_2f2f">#2F2F2F</color>
+    <color name="grey_3F3F">#3F3F3F</color>
+
 
 </resources>

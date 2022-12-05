@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/menuHome">
+
+    <keep_state_fragment
+        android:id="@+id/menuHome"
+        android:name="com.bravo.android.bravo.ui.view.main.home.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home">
+
+    </keep_state_fragment>
+
+    <keep_state_fragment
+        android:id="@+id/menuHealingInfo"
+        android:name="com.bravo.android.bravo.ui.view.main.healinginfo.HealingFragment"
+        android:label="HealingFragment"
+        tools:layout="@layout/fragment_healing_info">
+
+    </keep_state_fragment>
+
+    <keep_state_fragment
+        android:id="@+id/menuCommunity"
+        android:name="com.bravo.android.bravo.ui.view.main.community.CommunityFragment"
+        android:label="CommunityFragment"
+        tools:layout="@layout/fragment_community">
+
+    </keep_state_fragment>
+
+</navigation>
