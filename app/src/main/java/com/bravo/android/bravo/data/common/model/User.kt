@@ -1,10 +1,12 @@
 package com.bravo.android.bravo.data.common.model
 
 data class User(
-    val userType: String,
     val userToken: String,
-    val name: String,
     val email: String,
-    val agree : Int
-
+    val name: String,
+    val userType: String,
+    val profileImg : String?,
+    val region : Int,
+    val gender : Int,
+    val year : Int
 )

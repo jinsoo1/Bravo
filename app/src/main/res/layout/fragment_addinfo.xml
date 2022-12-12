@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
 
         <variable
             name="vm"
             type="com.bravo.android.bravo.ui.view.join.addinfo.AddInfoViewModel" />
+
+        <import type="android.view.View"/>
 
     </data>
 
@@ -58,12 +61,13 @@
                     android:fontFamily="@font/font_bold"
                     android:text="남성"
                     android:textSize="22dp"
+                    android:onClick="@{() -> vm.clickGender(0)}"
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:layout_weight="1"
-                    android:textColor="@color/white"
+                    android:textColor="@{vm.gender == 0 ? @color/black : @color/white}"
                     android:layout_marginRight="10dp"
-                    android:background="@drawable/bg_stroke_white_1dp_radius_64dp"/>
+                    android:background="@{vm.gender == 0 ?  @drawable/bg_white_radius_64dp : @drawable/bg_stroke_white_1dp_radius_64dp}"/>
 
                 <TextView
                     android:id="@+id/btn_female"
@@ -72,19 +76,21 @@
                     android:fontFamily="@font/font_bold"
                     android:text="여성"
                     android:textSize="22dp"
+                    android:onClick="@{() -> vm.clickGender(1)}"
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:layout_weight="1"
                     android:layout_marginLeft="10dp"
-                    android:textColor="@color/white"
-                    android:background="@drawable/bg_stroke_white_1dp_radius_64dp"/>
+                    android:textColor="@{vm.gender == 1 ? @color/black : @color/white}"
+                    android:background="@{vm.gender == 1?  @drawable/bg_white_radius_64dp : @drawable/bg_stroke_white_1dp_radius_64dp}"/>
+                    />
 
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:orientation="vertical"
                 android:layout_marginTop="40dp">
 
@@ -94,13 +100,35 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:backgroundTint="@color/purple_b496"
                         android:hint="출생연도를 선택해 주세요."
                         android:textColor="@color/white"
                         android:fontFamily="@font/font_medium"
+                        android:visibility="@{vm.tvBirth == null ? View.VISIBLE : View.GONE}"
                         android:textColorHint="@color/purple_b496"
+                        android:textSize="24dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/purple_b496"
+                        android:text="@={vm.tvBirth}"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/font_medium"
+                        android:textColorHint="@color/purple_b496"
+                        android:textSize="24dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/purple_b496"
+                        android:text="년생"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/font_medium"
+                        android:textColorHint="@color/purple_b496"
+                        android:visibility="@{vm.tvBirth == null ? View.GONE : View.VISIBLE}"
                         android:textSize="24dp" />
 
                 </LinearLayout>
@@ -112,9 +140,12 @@
                     android:background="@color/purple_b496"/>
 
                 <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/rv_city"
+                    android:id="@+id/rv_year"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="match_parent"
+                    bindYearList="@{vm.birth}"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    />
 
             </LinearLayout>
 
@@ -132,8 +163,9 @@
             android:layout_gravity="center"
             android:gravity="center"
             android:background="@drawable/btn_next_green37bc"
+            android:layout_marginTop="10dp"
             android:layout_marginBottom="20dp"
-            android:onClick="@{() -> vm.next}"/>
+            android:onClick="@{() -> vm.next()}"/>
 
 
     </LinearLayout>

@@ -5,12 +5,14 @@ interface BDPreferences {
         var accessToken: String
         var refreshToken: String
 
-        var userType: String
         var userToken: String
-        var nickname: String
         var email: String
+        var name: String
+        var userType: String
         var profileImg : String?
-        var agree : Boolean
+        var region : Int
+        var gender : Int
+        var year : Int
 
 
 

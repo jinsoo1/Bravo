@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
 
         <variable
             name="vm"
             type="com.bravo.android.bravo.ui.view.join.address.AddressViewModel" />
+
+        <import type="android.view.View"/>
 
     </data>
 
@@ -18,107 +21,126 @@
         android:paddingLeft="20dp"
         android:background="@color/purple_6e32">
 
-        <LinearLayout
+        <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_weight="1">
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_marginTop="20dp"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:id="@+id/btnBack"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-
-        </LinearLayout>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="주소를 입력하고\n동네 친구들을 만나보세요."
-            android:textColor="@color/white"
-            android:fontFamily="@font/font_bold"
-            android:textSize="30dp"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginTop="40dp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:backgroundTint="@color/purple_b496"
-                android:hint="시,도를 선택 해 주세요"
-                android:textColor="@color/white"
-                android:fontFamily="@font/font_medium"
-                android:textColorHint="@color/purple_b496"
-                android:textSize="24dp" />
-
-        </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="10dp"
-                android:background="@color/purple_b496"/>
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rv_city"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginTop="30dp">
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="vertical"
+                android:weightSum="3"
+                >
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/btnBack"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="@color/purple_b496"
-                    android:fontFamily="@font/font_medium"
-                    android:hint="시,군,구를 선택 해 주세요"
+                    android:text="주소를 입력하고\n동네 친구들을 만나보세요."
                     android:textColor="@color/white"
-                    android:textColorHint="@color/purple_b496"
-                    android:textSize="24dp" />
+                    android:fontFamily="@font/font_bold"
+                    android:textSize="30dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_marginTop="40dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/purple_b496"
+                            android:hint="시,도를 선택 해 주세요"
+                            android:textColor="@color/white"
+                            android:text="@={vm.city}"
+                            android:fontFamily="@font/font_medium"
+                            android:textColorHint="@color/purple_b496"
+                            android:textSize="24dp" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/purple_b496"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_city"
+                        bindCityList="@{vm.addressCity}"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:visibility="@{vm.city == null ? View.GONE : View.VISIBLE}"
+                    android:layout_marginTop="30dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_region"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/purple_b496"
+                            android:fontFamily="@font/font_medium"
+                            android:hint="시,군,구를 선택 해 주세요"
+                            android:text="@{vm.region.region}"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/purple_b496"
+                            android:textSize="24dp" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/purple_b496"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_district"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        bindRegionList="@{vm.addressRegion}"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        />
+
+                </LinearLayout>
 
             </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="10dp"
-                android:background="@color/purple_b496"/>
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rv_district"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-
-        </LinearLayout>
-
-    </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
 
     <TextView
         android:id="@+id/btnNext"
@@ -131,8 +153,9 @@
         android:layout_gravity="center"
         android:gravity="center"
         android:background="@drawable/btn_next_green37bc"
+        android:layout_marginTop="10dp"
         android:layout_marginBottom="20dp"
-        android:onClick="@{() -> vm.next}"/>
+        android:onClick="@{() -> vm.next()}"/>
 
 
     </LinearLayout>

@@ -20,6 +20,21 @@ android {
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+    signingConfigs {
+        release {
+            keyAlias 'bravo'
+            keyPassword 'bravo12'
+            storeFile  rootProject.file("key/bravo.jks")
+            storePassword 'bravo12'
+        }
+
+        debug {
+            keyAlias 'bravo'
+            keyPassword 'bravo12'
+            storeFile rootProject.file("key/bravo.jks")
+            storePassword 'bravo12'
+        }
+    }
 
     buildTypes {
         debug {
@@ -30,6 +45,7 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
         }
     }
     compileOptions {
@@ -44,6 +60,20 @@ android {
         dataBinding = true
         viewBinding = true
     }
+
+    flavorDimensions "server"
+    productFlavors {
+        dev {
+            dimension = "server"
+            applicationIdSuffix ".dev"
+            buildConfigField 'String', 'BASE_URL', '"http://api.bravo-corp.com"'
+        }
+        prod {
+            dimension = "server"
+            buildConfigField 'String', 'BASE_URL', '"http://api.bravo-corp.com"'
+        }
+    }
+
 }
 
 dependencies {
@@ -128,8 +158,8 @@ dependencies {
     //구글 로그인
     implementation 'com.shobhitpuri.custombuttons:google-signin:1.1.0'
     //카카오 로그인
-//    implementation 'com.kakao.sdk:v2-user:2.11.2'
-//    implementation "com.kakao.sdk:v2-user-rx:2.11.2"
+    implementation 'com.kakao.sdk:v2-user:2.11.2'
+    implementation "com.kakao.sdk:v2-user-rx:2.11.2"
 
     //implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
 

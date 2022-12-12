@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph_join"
-    app:startDestination="@layout/fragment_nickname">
+    app:startDestination="@+id/fragment_nickname">
 
     <fragment
         android:id="@+id/fragment_nickname"
@@ -13,7 +13,7 @@
 
         <action
             android:id="@+id/action_nicknameFragment_to_addressFragment"
-            app:destination="@+id/fragment_name"/>
+            app:destination="@+id/fragment_address"/>
 
 
     </fragment>
@@ -24,12 +24,25 @@
         android:label="fragment_2"
         tools:layout="@layout/fragment_address">
 
+
         <action
-            android:id="@+id/action_addressFragment_to_termsFragment"
-            app:destination="@+id/fragment_terms"/>
-
-
+            android:id="@+id/action_fragment_address_to_addInfoFragment"
+            app:destination="@id/addInfoFragment" />
     </fragment>
+
+    <fragment
+        android:id="@+id/addInfoFragment"
+        android:name="com.bravo.android.bravo.ui.view.join.addinfo.AddInfoFragment"
+        android:label="AddInfoFragment"
+        tools:layout="@layout/fragment_addinfo"
+        >
+
+
+        <action
+            android:id="@+id/action_addInfoFragment_to_fragment_terms"
+            app:destination="@id/fragment_terms" />
+    </fragment>
+
 
     <fragment
         android:id="@+id/fragment_terms"

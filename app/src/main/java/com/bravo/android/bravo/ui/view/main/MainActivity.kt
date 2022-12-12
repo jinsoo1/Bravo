@@ -2,6 +2,7 @@ package com.bravo.android.bravo.ui.view.main
 
 import com.bravo.android.bravo.R
 import com.bravo.android.bravo.base.BaseVmActivity
+import com.bravo.android.bravo.data.local.pref.PreferencesController
 import com.bravo.android.bravo.databinding.ActivityMainBinding
 
 class MainActivity : BaseVmActivity<ActivityMainBinding>(

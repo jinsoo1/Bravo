@@ -9,11 +9,14 @@ class UserLoginLocalDataSource {
         user: User
     ) {
         userInfoPref.apply {
-            userType = user.userType
             userToken = user.userToken
-            nickname = user.name
             email = user.email
-            agree = user.agree == 1
+            name = user.name
+            userType = user.userType
+            profileImg = user.profileImg
+            region = user.region
+            gender = user.gender
+            year = user.year
         }
     }
 

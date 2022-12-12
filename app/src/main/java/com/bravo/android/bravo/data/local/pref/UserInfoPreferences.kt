@@ -23,18 +23,25 @@ class UserInfoPreferences(
     override var userToken: String
         get() = userInfoPref.getString(KEY_USER_TOKEN, null) ?: ""
         set(value) { userInfoPref.edit { putString(KEY_USER_TOKEN, value) } }
-    override var nickname: String
-        get() = userInfoPref.getString(KEY_NICKNAME, null) ?: ""
-        set(value) { userInfoPref.edit { putString(KEY_NICKNAME, value) } }
+    override var name: String
+        get() = userInfoPref.getString(KEY_NAME, null) ?: ""
+        set(value) { userInfoPref.edit { putString(KEY_NAME, value) } }
     override var email: String
         get() = userInfoPref.getString(KEY_EMAIL, null) ?: ""
         set(value) { userInfoPref.edit { putString(KEY_EMAIL, value) } }
     override var profileImg: String?
         get() = userInfoPref.getString(KEY_PROFILEIMG, null) ?: ""
         set(value) { userInfoPref.edit { putString(KEY_PROFILEIMG, value) } }
-    override var agree: Boolean
-        get() = userInfoPref.getBoolean(KEY_AGREE, false) ?: false
-        set(value) { userInfoPref.edit { putBoolean(KEY_AGREE, value) } }
+    override var region: Int
+        get() = userInfoPref.getInt(KEY_REGION, 0)
+        set(value) { userInfoPref.edit { putInt(KEY_REGION, value) } }
+    override var gender: Int
+        get() = userInfoPref.getInt(KEY_GENDER, 0)
+        set(value) { userInfoPref.edit { putInt(KEY_GENDER, value) } }
+    override var year: Int
+        get() = userInfoPref.getInt(KEY_YEAR, 0)
+        set(value) { userInfoPref.edit { putInt(KEY_YEAR, value) } }
+
 
     override var noticeCreated: String
         get() = userInfoPref.getString(KEY_NOTICE_CREATED, null) ?: ""
@@ -52,10 +59,13 @@ class UserInfoPreferences(
         private const val KEY_REFRESH_TOKEN = "refresh_token"
         private const val KEY_USER_TYPE = "user_type"
         private const val KEY_USER_TOKEN = "user_token"
-        private const val KEY_NICKNAME = "nickname"
+        private const val KEY_NAME = "name"
         private const val KEY_EMAIL = "email"
         private const val KEY_PROFILEIMG = "profileImg"
-        private const val KEY_AGREE = "agree"
+        private const val KEY_REGION = "region"
+        private const val KEY_GENDER = "gender"
+        private const val KEY_YEAR = "year"
+
         private const val KEY_NOTICE_CREATED = "notice_created"
     }
 }
