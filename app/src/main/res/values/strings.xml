@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">Bravo</string>
+
+    <string name="comment_shared">댓글 %d 공유 %d</string>
+    <string name="tv_comment">댓글 %d</string>
+    <string name="tv_shared">공유 %d</string>
+    <string name="tv_likes">좋아요 %d</string>
+    <string name="like_person">%d명</string>
+
+    <string name="category_all">주제별 보기</string>
+    <string name="healing">힐링</string>
+    
+    <string name="number_people">%d명</string>
+
+    <string name="month">%s월</string>
+    <string name="day">%s일</string>
+    
+    <string name="peopleNum">%d명 참여중</string>
+    <string name="people_count">참여인원 (%d/%d)</string>
+
+    <string name="ban_user">%s님을 차단하시겠어요?</string>
 </resources>

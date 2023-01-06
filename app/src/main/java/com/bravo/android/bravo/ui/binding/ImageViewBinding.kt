@@ -3,6 +3,7 @@ package com.bravo.android.bravo.ui.binding
 import android.graphics.drawable.Drawable
 import android.widget.ImageView
 import androidx.databinding.BindingAdapter
+import com.bravo.android.bravo.R
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.DataSource
 import com.bumptech.glide.load.engine.GlideException
@@ -32,42 +33,42 @@ fun loadImage(
 ) = target.apply {
     scaleType = ImageView.ScaleType.CENTER_INSIDE
 
-//    var request = Glide
-//        .with(context)
-//        .load(url)
-//        .placeholder(
-//            if (isProfileImage) R.drawable.illust_dog
-//            else R.drawable.ic_gallery_post
-//        )
-//        .error(
-//            if (isProfileImage) R.drawable.illust_dog
-//            else R.drawable.ic_gallery_post
-//        )
-//        .addListener(object : RequestListener<Drawable> {
-//            override fun onLoadFailed(
-//                e: GlideException?,
-//                model: Any?,
-//                target: Target<Drawable>?,
-//                isFirstResource: Boolean
-//            ): Boolean {
-//                scaleType = ImageView.ScaleType.CENTER_INSIDE
-//                return false
-//            }
-//
-//            override fun onResourceReady(
-//                resource: Drawable?,
-//                model: Any?,
-//                target: Target<Drawable>?,
-//                dataSource: DataSource?,
-//                isFirstResource: Boolean
-//            ): Boolean {
-//                scaleType = ImageView.ScaleType.CENTER_CROP
-//                return false
-//            }
-//        })
-//    if (isCircular) request = request.circleCrop()
-//
-//    request.into(this)
+    var request = Glide
+        .with(context)
+        .load(url)
+        .placeholder(
+            if (isProfileImage) R.drawable.ic_test_icon
+            else R.drawable.ic_test_icon
+        )
+        .error(
+            if (isProfileImage) R.drawable.ic_test_icon
+            else R.drawable.ic_test_icon
+        )
+        .addListener(object : RequestListener<Drawable> {
+            override fun onLoadFailed(
+                e: GlideException?,
+                model: Any?,
+                target: Target<Drawable>?,
+                isFirstResource: Boolean
+            ): Boolean {
+                scaleType = ImageView.ScaleType.CENTER_INSIDE
+                return false
+            }
+
+            override fun onResourceReady(
+                resource: Drawable?,
+                model: Any?,
+                target: Target<Drawable>?,
+                dataSource: DataSource?,
+                isFirstResource: Boolean
+            ): Boolean {
+                scaleType = ImageView.ScaleType.CENTER_CROP
+                return false
+            }
+        })
+    if (isCircular) request = request.circleCrop()
+
+    request.into(this)
 }
 
 fun loadImageInside(
@@ -78,40 +79,40 @@ fun loadImageInside(
 ) = target.apply {
     scaleType = ImageView.ScaleType.CENTER_INSIDE
 
-//    var request = Glide
-//        .with(context)
-//        .load(url)
-//        .placeholder(
-//            if (isProfileImage) R.drawable.ic_stamp_gray
-//            else R.drawable.ic_gallery_post
-//        )
-//        .error(
-//            if (isProfileImage) R.drawable.ic_stamp_gray
-//            else R.drawable.ic_gallery_post
-//        )
-//        .addListener(object : RequestListener<Drawable> {
-//            override fun onLoadFailed(
-//                e: GlideException?,
-//                model: Any?,
-//                target: Target<Drawable>?,
-//                isFirstResource: Boolean
-//            ): Boolean {
-//                scaleType = ImageView.ScaleType.CENTER_INSIDE
-//                return false
-//            }
-//
-//            override fun onResourceReady(
-//                resource: Drawable?,
-//                model: Any?,
-//                target: Target<Drawable>?,
-//                dataSource: DataSource?,
-//                isFirstResource: Boolean
-//            ): Boolean {
-//                scaleType = ImageView.ScaleType.CENTER_INSIDE
-//                return false
-//            }
-//        })
-//    if (isCircular) request = request.circleCrop()
-//
-//    request.into(this)
+    var request = Glide
+        .with(context)
+        .load(url)
+        .placeholder(
+            if (isProfileImage) R.drawable.ic_test_icon
+            else R.drawable.ic_test_icon
+        )
+        .error(
+            if (isProfileImage) R.drawable.ic_test_icon
+            else R.drawable.ic_test_icon
+        )
+        .addListener(object : RequestListener<Drawable> {
+            override fun onLoadFailed(
+                e: GlideException?,
+                model: Any?,
+                target: Target<Drawable>?,
+                isFirstResource: Boolean
+            ): Boolean {
+                scaleType = ImageView.ScaleType.CENTER_INSIDE
+                return false
+            }
+
+            override fun onResourceReady(
+                resource: Drawable?,
+                model: Any?,
+                target: Target<Drawable>?,
+                dataSource: DataSource?,
+                isFirstResource: Boolean
+            ): Boolean {
+                scaleType = ImageView.ScaleType.CENTER_INSIDE
+                return false
+            }
+        })
+    if (isCircular) request = request.circleCrop()
+
+    request.into(this)
 }

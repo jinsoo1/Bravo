@@ -11,7 +11,7 @@ interface BDPreferences {
         var userType: String
         var profileImg : String?
         var region : Int
-        var gender : Int
+        var gender : Boolean
         var year : Int
 
 

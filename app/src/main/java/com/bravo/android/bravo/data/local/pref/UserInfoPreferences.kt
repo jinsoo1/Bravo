@@ -35,9 +35,9 @@ class UserInfoPreferences(
     override var region: Int
         get() = userInfoPref.getInt(KEY_REGION, 0)
         set(value) { userInfoPref.edit { putInt(KEY_REGION, value) } }
-    override var gender: Int
-        get() = userInfoPref.getInt(KEY_GENDER, 0)
-        set(value) { userInfoPref.edit { putInt(KEY_GENDER, value) } }
+    override var gender: Boolean
+        get() = userInfoPref.getBoolean(KEY_GENDER, false)
+        set(value) { userInfoPref.edit { putBoolean(KEY_GENDER, value) } }
     override var year: Int
         get() = userInfoPref.getInt(KEY_YEAR, 0)
         set(value) { userInfoPref.edit { putInt(KEY_YEAR, value) } }

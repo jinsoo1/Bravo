@@ -14,8 +14,8 @@ import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 import com.bravo.android.bravo.BuildConfig.BASE_URL
-import com.bravo.android.bravo.data.remote.api.AuthApi
-import com.bravo.android.bravo.data.remote.api.UserApi
+import com.bravo.android.bravo.data.remote.api.*
+import retrofit2.create
 
 val networkModule = module {
 
@@ -64,6 +64,9 @@ val networkModule = module {
     //Api추가시에 한줄씩 추가
     single<AuthApi> { get<Retrofit>().create(AuthApi::class.java) }
     single<UserApi> { get<Retrofit>().create(UserApi::class.java) }
+    single<HealingApi> { get<Retrofit>().create(HealingApi::class.java) }
+    single<StoryApi> { get<Retrofit>().create(StoryApi::class.java) }
+    single<TogetherApi> { get<Retrofit>().create(TogetherApi::class.java) }
 
 }
 

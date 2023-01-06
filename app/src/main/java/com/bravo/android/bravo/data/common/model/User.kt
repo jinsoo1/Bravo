@@ -6,7 +6,7 @@ data class User(
     val name: String,
     val userType: String,
     val profileImg : String?,
-    val region : Int,
+    val regionToken : Int,
     val gender : Int,
     val year : Int
 )

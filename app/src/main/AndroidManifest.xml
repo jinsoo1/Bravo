@@ -4,6 +4,9 @@
     package="com.bravo.android.bravo">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_MEDIA_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -16,6 +19,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"
         android:usesCleartextTraffic="true"
+        android:requestLegacyExternalStorage="true"
         tools:targetApi="31">
         <activity
             android:name=".ui.view.splash.SplashActivity"
@@ -46,6 +50,13 @@
 
         <activity android:name=".ui.view.join.JoinActivity"/>
         <activity android:name=".ui.view.main.MainActivity"/>
+        <activity android:name=".ui.view.healing.HealingDetailActivity"/>
+        <activity android:name="com.bravo.android.bravo.ui.view.main.community.story.story_write.StoryWriteActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <activity android:name="com.bravo.android.bravo.ui.view.main.community.story.story_detail.StoryDetailActivity"/>
+        <activity android:name=".ui.view.main.community.together.TogetherActivity"/>
+        <activity android:name=".ui.view.main.community.together.together_detail.TogetherDetailActivity"/>
     </application>
 
 

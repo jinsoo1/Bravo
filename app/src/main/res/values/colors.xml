@@ -33,6 +33,13 @@
     <color name="grey_6666">#666666</color>
     <color name="grey_8888">#888888</color>
     <color name="grey_bbbb">#BBBBBB</color>
+    <color name="grey_5959">#595959</color>
+    <color name="grey_D6D6">#D6D6D6</color>
+    <color name="grey_3F3F">#3F3F3F</color>
+    <color name="grey_B4B4">#B4B4B4</color>
+    <color name="grey_8787">#878787</color>
+    <color name="grey_F3F3">#F3F3F3</color>
+    <color name="grey_F8F8">#F8F8F8</color>
 
     <!-- green -->
     <color name="green_009C">#009C47</color>
@@ -66,6 +73,7 @@
     <color name="purple_6e32">#6E32FF</color>
     <color name="purple_b496">#B496FF</color>
     <color name="purple_5021">#5021C1</color>
+    <color name="purple_d2c0">#D2C0FF</color>
 
 
     <color name="green_0c85">#0CB56E</color>
@@ -73,7 +81,23 @@
 
     <color name="black_1616">#161616</color>
     <color name="grey_2f2f">#2F2F2F</color>
-    <color name="grey_3F3F">#3F3F3F</color>
 
+    <color name="red_ff4e">#FF4E36</color>
+
+
+
+    //RichEditor
+    <color name="maroon">#800000</color>
+    <color name="red">#FF0000</color>
+    <color name="magenta">#ff00ff</color>
+    <color name="pink">#ff99cc</color>
+    <color name="orange">#FF6600</color>
+    <color name="yellow">#ffff00</color>
+    <color name="lime">#00FF00</color>
+    <color name="aqua">#00FFFF</color>
+    <color name="blue">#0000FF</color>
+    <color name="sky_blue">#00ccff</color>
+    <color name="pale_cyan">#ccffff</color>
+    <color name="green">#008000</color>
 
 </resources>

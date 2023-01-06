@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="weigh_56dp">56dp</dimen>
+    <dimen name="weigh_88dp">88dp</dimen>
+    <dimen name="height_136dp">136dp</dimen>
+    <dimen name="height_164dp">164dp</dimen>
+</resources>

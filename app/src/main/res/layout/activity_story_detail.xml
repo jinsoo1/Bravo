@@ -1,0 +1,593 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="vm"
+            type="com.bravo.android.bravo.ui.view.main.community.story.story_detail.StoryDetailViewModel" />
+
+        <import type="com.bravo.android.bravo.util.ext.StringExt"/>
+        <import type="android.view.View"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="@{vm.isLoading ? View.GONE : View.VISIBLE}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            >
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:src="@drawable/ic__back__appbar"
+                android:layout_marginStart="30dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/iv_download"
+                app:layout_constraintBottom_toBottomOf="@id/iv_download"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_download"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_test_icon"
+                android:layout_marginEnd="25dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintEnd_toStartOf="@+id/iv_shared"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_shared"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_test_icon"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/scrollview"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toBottomOf="@+id/iv_download"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/layout_comment"
+                >
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/iv_profile"
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:layout_marginTop="27dp"
+                        android:layout_marginStart="24dp"
+                        bindProfileImage="@{vm.detailData.profileImg}"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@{vm.detailData.name}"
+                        android:textStyle="bold"
+                        android:textSize="18dp"
+                        android:textColor="@color/black"
+                        android:layout_marginStart="16dp"
+                        app:layout_constraintTop_toTopOf="@+id/iv_profile"
+                        app:layout_constraintStart_toEndOf="@+id/iv_profile"
+                        />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_year"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16dp"
+                        android:text="@{vm.detailData.year}"
+                        android:textColor="@color/grey_3F3F"
+                        android:layout_marginStart="8dp"
+                        app:layout_constraintStart_toEndOf="@+id/tv_name"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_name"
+                        />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_region"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16dp"
+                        android:text="@{vm.detailData.sido+vm.detailData.sigungu}"
+                        android:textColor="@color/grey_3F3F"
+                        android:layout_marginStart="8dp"
+                        app:layout_constraintStart_toEndOf="@+id/tv_year"
+                        app:layout_constraintTop_toTopOf="@+id/tv_year"
+                        />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16dp"
+                        android:text="@{vm.detailData.createdAt}"
+                        android:textColor="@color/grey_8787"
+                        android:layout_marginStart="16dp"
+                        app:layout_constraintStart_toEndOf="@id/iv_profile"
+                        app:layout_constraintBottom_toBottomOf="@+id/iv_profile"
+                        />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_comment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/grey_5959"
+                        android:textSize="16dp"
+                        android:text="@{@string/comment_shared(vm.commentList.size, vm.detailData.shareCount)}"
+                        android:layout_marginTop="10dp"
+                        app:layout_constraintStart_toStartOf="@id/iv_profile"
+                        app:layout_constraintTop_toBottomOf="@+id/iv_profile"
+                        />
+
+                    <WebView
+                        android:id="@+id/tv_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginBottom="40dp"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginEnd="24dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_comment"
+                        />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/iv_like"
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:elevation="5dp"
+                        android:background="@{vm.detailData.isLike() ? @drawable/bg_oval_white : @drawable/bg_oval_grey}"
+                        android:onClick="@{() -> vm.likeItem()}"
+                        android:layout_marginTop="20dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_content"
+                        />
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/layout_like"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="24dp"
+                        app:layout_constraintStart_toStartOf="@id/iv_like"
+                        app:layout_constraintEnd_toEndOf="@id/iv_like"
+                        app:layout_constraintTop_toBottomOf="@+id/iv_like"
+                        >
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/purple_6e32"
+                            android:textSize="18dp"
+                            android:text="@{@string/like_person(vm.detailData.isLikeCount)}"
+                            />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:textSize="18dp"
+                            android:text="이 함께 좋아합니다."
+                            android:layout_marginBottom="40dp"
+                            />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/layout_middle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@color/grey_f6f6"
+                        app:layout_constraintTop_toBottomOf="@+id/layout_like"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        >
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center"
+                            android:background="@drawable/bg_purple_radius_8dp"
+                            android:paddingTop="15dp"
+                            android:paddingBottom="15dp"
+                            android:layout_marginTop="24dp"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginEnd="24dp"
+                            >
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/white"
+                                android:textSize="22dp"
+                                android:textStyle="bold"
+                                android:text="이미지 다운 받기"
+                                />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_camera"
+                                android:layout_marginStart="10dp"
+                                />
+
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center"
+                            android:background="@drawable/bg_white_stroke_purple_10dp_radius"
+                            android:paddingTop="15dp"
+                            android:paddingBottom="15dp"
+                            android:layout_marginTop="18dp"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginEnd="24dp"
+                            >
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/purple_6e32"
+                                android:textSize="22dp"
+                                android:textStyle="bold"
+                                android:text="친구들에게 공유하기"
+                                />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_test_icon"
+                                android:layout_marginStart="10dp"
+                                />
+
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:textSize="26dp"
+                            android:text="브라보 추천제품"
+                            android:layout_marginTop="64dp"
+                            android:layout_marginStart="24dp"
+                            />
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:cardCornerRadius="20dp"
+                            android:layout_marginTop="32dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="16dp"
+                            >
+                            <androidx.viewpager2.widget.ViewPager2
+                                android:layout_width="match_parent"
+                                android:layout_height="396dp"
+                                />
+
+                        </androidx.cardview.widget.CardView>
+
+
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="48dp"
+                            android:onClick="@{() -> vm.onClickBeforeContent(vm.detailData.beforeS.feedToken)}"
+                            >
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/purple_6e32"
+                                android:textSize="24dp"
+                                android:text="이전"
+                                android:layout_marginStart="24dp"
+                                android:layout_marginTop="32dp"
+                                android:layout_marginBottom="32dp"
+                                android:layout_marginEnd="16dp"
+                                />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tv_befores"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textSize="24dp"
+                                android:visibility="@{vm.detailData.beforeS.content == null ? View.GONE : View.VISIBLE}"
+                                android:singleLine="true"
+                                android:layout_marginTop="32dp"
+                                android:layout_marginBottom="32dp"
+                                android:layout_marginEnd="24dp"
+                                />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textSize="24dp"
+                                android:text="이전 이야기가 없습니다."
+                                android:visibility="@{vm.detailData.beforeS.content == null ? View.VISIBLE : View.GONE}"
+                                android:singleLine="true"
+                                android:layout_marginTop="32dp"
+                                android:layout_marginBottom="32dp"
+                                android:layout_marginEnd="24dp"
+                                />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="8dp"
+                            android:onClick="@{() -> vm.onClickAfterContent(vm.detailData.afterS.feedToken)}"
+                            >
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/purple_6e32"
+                                android:textSize="24dp"
+                                android:text="다음"
+                                android:layout_marginStart="24dp"
+                                android:layout_marginTop="32dp"
+                                android:layout_marginBottom="32dp"
+                                android:layout_marginEnd="16dp"
+                                />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tv_afters"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textSize="24dp"
+                                android:visibility="@{vm.detailData.afterS.content == null ? View.GONE : View.VISIBLE}"
+                                android:singleLine="true"
+                                android:layout_marginTop="32dp"
+                                android:layout_marginBottom="32dp"
+                                android:layout_marginEnd="24dp"
+                                />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textSize="24dp"
+                                android:text="다음 이야기가 없습니다."
+                                android:visibility="@{vm.detailData.afterS.content == null ? View.VISIBLE : View.GONE}"
+                                android:singleLine="true"
+                                android:layout_marginTop="32dp"
+                                android:layout_marginBottom="32dp"
+                                android:layout_marginEnd="24dp"
+                                />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="48dp"
+                            >
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tv_comment1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textSize="26dp"
+                                android:text="댓글"
+                                android:textStyle="bold"
+                                android:layout_marginStart="24dp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/purple_6e32"
+                                android:textSize="24dp"
+                                android:text="@{Integer.toString(vm.commentList.size)}"
+                                android:layout_marginStart="8dp"
+                                app:layout_constraintStart_toEndOf="@id/tv_comment1"
+                                app:layout_constraintTop_toTopOf="@id/tv_comment1"
+                                app:layout_constraintBottom_toBottomOf="@id/tv_comment1"
+                                />
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginEnd="24dp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                >
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/black"
+                                    android:textSize="26dp"
+                                    android:text="최신순"
+                                    />
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/ic_camera"
+                                    android:layout_marginStart="8dp"
+                                    />
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rv_comment"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                bindStoryCommentList="@{vm.commentList}"
+                                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                                android:visibility="@{vm.detailData.commentCount == 0 ? View.GONE : View.VISIBLE}"
+                                app:layout_constraintTop_toBottomOf="@+id/tv_comment1"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:textColor="@color/grey_bbbb"
+                                android:textSize="22dp"
+                                android:text="아직 댓글이 없어요\n가장 먼저 댓글을 남겨보세요"
+                                android:visibility="@{vm.detailData.commentCount == 0 ? View.VISIBLE : View.GONE}"
+                                android:layout_marginTop="25dp"
+                                android:layout_marginBottom="25dp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/tv_comment1"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.core.widget.NestedScrollView>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_comment"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                >
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_gallery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_test_icon"
+                    android:onClick="@{() -> vm.setOpenGallery()}"
+                    android:layout_marginStart="24dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:paddingStart="24dp"
+                    android:paddingTop="12.5dp"
+                    android:paddingBottom="12.5dp"
+                    android:textSize="18dp"
+                    android:hint="댓글을 입력해주세요"
+                    android:text="@={vm.comment}"
+                    android:textColorHint="@color/grey_D6D6"
+                    android:background="@drawable/bg_grey_f3f3_radius_8dp"
+                    app:layout_constraintTop_toTopOf="@id/iv_send"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_send"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/iv_gallery"
+                    />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_send"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_test_icon"
+                    android:layout_marginEnd="16dp"
+                    android:onClick="@{() -> vm.setSendComment()}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_image"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/ic_test_icon"
+                bindImage="@{vm.commentImg}"
+                android:visibility="@{vm.commentImg == null ? View.GONE : View.VISIBLE }"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/layout_comment"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_clear"
+                android:onClick="@{() -> vm.setOnClearImage()}"
+                android:visibility="@{vm.commentImg == null ? View.GONE : View.VISIBLE }"
+                app:layout_constraintTop_toTopOf="@+id/iv_image"
+                app:layout_constraintEnd_toEndOf="@+id/iv_image"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="@{vm.isLoading ? View.VISIBLE : View.GONE}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

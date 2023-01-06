@@ -14,8 +14,8 @@ class UserLoginLocalDataSource {
             name = user.name
             userType = user.userType
             profileImg = user.profileImg
-            region = user.region
-            gender = user.gender
+            region = user.regionToken
+            gender = user.gender == 1 //0 = 남자 1 = 여자
             year = user.year
         }
     }

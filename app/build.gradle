@@ -168,4 +168,6 @@ dependencies {
 
     implementation 'io.github.ParkSangGwon:tedpermission-normal:3.3.0'
     implementation 'gun0912.ted:tedbottompicker:2.0.1'
+
+    implementation 'com.github.esafirm.android-image-picker:imagepicker:2.0.0'
 }

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_together"
+    app:startDestination="@id/togetherFirstFragment">
+
+    <fragment
+        android:id="@+id/togetherFirstFragment"
+        android:name="com.bravo.android.bravo.ui.view.main.community.together.fragment.first.TogetherFirstFragment"
+        android:label="TogetherFirstFragment"
+        tools:layout="@layout/fragment_together_first"
+        >
+        <action
+            android:id="@+id/action_togetherFirstFragment_to_togetherSecondFragment"
+            app:destination="@id/togetherSecondFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/togetherSecondFragment"
+        android:name="com.bravo.android.bravo.ui.view.main.community.together.fragment.second.TogetherSecondFragment"
+        android:label="TogetherSecondFragment"
+        tools:layout="@layout/fragment_together_second"
+        >
+        <action
+            android:id="@+id/action_togetherSecondFragment_to_togetherThirdFragment"
+            app:destination="@id/togetherThirdFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/togetherThirdFragment"
+        android:name="com.bravo.android.bravo.ui.view.main.community.together.fragment.third.TogetherThirdFragment"
+        android:label="TogetherThirdFragment"
+        tools:layout="@layout/fragment_together_third"
+        >
+        <action
+            android:id="@+id/action_togetherThirdFragment_to_togetherFourthFragment"
+            app:destination="@id/togetherFourthFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/togetherFourthFragment"
+        android:name="com.bravo.android.bravo.ui.view.main.community.together.fragment.fourth.TogetherFourthFragment"
+        android:label="TogetherFourthFragment"
+        tools:layout="@layout/fragment_together_fourth"
+        >
+        <action
+            android:id="@+id/action_togetherFourthFragment_to_togetherFifthFragment"
+            app:destination="@id/togetherFifthFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/togetherFifthFragment"
+        android:name="com.bravo.android.bravo.ui.view.main.community.together.fragment.fifth.TogetherFifthFragment"
+        android:label="TogetherFifthFragment"
+        tools:layout="@layout/fragment_together_fifth"
+        >
+        <action
+            android:id="@+id/action_togetherFifthFragment_to_togetherCompleteFragment"
+            app:destination="@id/togetherCompleteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/togetherCompleteFragment"
+        android:name="com.bravo.android.bravo.ui.view.main.community.together.fragment.complete.TogetherCompleteFragment"
+        android:label="TogetherCompleteFragment"
+        tools:layout="@layout/fragment_together_complete"
+        />
+</navigation>

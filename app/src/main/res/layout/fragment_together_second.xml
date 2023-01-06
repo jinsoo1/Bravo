@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="vm"
+            type="com.bravo.android.bravo.ui.view.main.community.together.fragment.second.TogetherSecondViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_title"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:background="@color/purple_6e32"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            >
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_num1"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/ic__back__appbar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_second"
+                app:layout_constraintBottom_toBottomOf="@id/tv_second"
+                app:layout_constraintEnd_toStartOf="@id/iv_arrow1"
+                />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_arrow1"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:src="@drawable/ic__back__appbar"
+                app:layout_constraintStart_toEndOf="@id/iv_num1"
+                app:layout_constraintTop_toTopOf="@id/tv_second"
+                app:layout_constraintBottom_toBottomOf="@id/tv_second"
+                app:layout_constraintEnd_toStartOf="@id/tv_second"
+                />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_second"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="24dp"
+                android:text="2단계"
+                app:layout_constraintStart_toEndOf="@+id/iv_arrow1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/iv_arrow2"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_arrow2"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:src="@drawable/ic__back__appbar"
+                app:layout_constraintStart_toEndOf="@id/tv_second"
+                app:layout_constraintTop_toTopOf="@id/tv_second"
+                app:layout_constraintBottom_toBottomOf="@id/tv_second"
+                app:layout_constraintEnd_toStartOf="@id/iv_num3"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_num3"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/ic__back__appbar"
+                app:layout_constraintStart_toEndOf="@id/iv_arrow2"
+                app:layout_constraintTop_toTopOf="@id/tv_second"
+                app:layout_constraintBottom_toBottomOf="@id/tv_second"
+                app:layout_constraintEnd_toStartOf="@id/iv_arrow3"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_arrow3"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:src="@drawable/ic__back__appbar"
+                app:layout_constraintStart_toEndOf="@id/iv_num3"
+                app:layout_constraintTop_toTopOf="@id/tv_second"
+                app:layout_constraintBottom_toBottomOf="@id/tv_second"
+                app:layout_constraintEnd_toStartOf="@id/iv_num4"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_num4"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/ic__back__appbar"
+                app:layout_constraintStart_toEndOf="@id/iv_arrow3"
+                app:layout_constraintTop_toTopOf="@id/tv_second"
+                app:layout_constraintBottom_toBottomOf="@id/tv_second"
+                app:layout_constraintEnd_toStartOf="@id/iv_arrow4"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_arrow4"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:src="@drawable/ic__back__appbar"
+                app:layout_constraintStart_toEndOf="@id/iv_num4"
+                app:layout_constraintTop_toTopOf="@id/tv_second"
+                app:layout_constraintBottom_toBottomOf="@id/tv_second"
+                app:layout_constraintEnd_toStartOf="@id/iv_num5"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_num5"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/ic__back__appbar"
+                app:layout_constraintStart_toEndOf="@id/iv_arrow4"
+                app:layout_constraintTop_toTopOf="@id/tv_second"
+                app:layout_constraintBottom_toBottomOf="@id/tv_second"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_title"
+            app:layout_constraintBottom_toBottomOf="parent"
+            >
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/grey_eaea"
+                >
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    >
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="26dp"
+                        android:textColor="@color/black"
+                        android:text="활동 기본정보 입력"
+                        android:textStyle="bold"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="26dp"
+                        />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="26dp"
+                        android:textColor="@color/black"
+                        android:text="제목"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="26dp"
+                        />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/et_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:hint="활동 제목을 입력해주세요"
+                        android:text="@={vm.title}"
+                        android:textSize="18dp"
+                        android:maxLines="1"
+                        android:inputType="text"
+                        android:gravity="center_vertical"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginEnd="24dp"
+                        android:layout_marginTop="16dp"
+                        android:paddingStart="24dp"
+                        android:paddingEnd="24dp"
+                        android:background="@drawable/bg_grey_radius_10dp"
+                        />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="26dp"
+                        android:textColor="@color/black"
+                        android:text="활동내용 상세"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="24dp"
+                        />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginEnd="24dp"
+                        android:layout_marginTop="16dp"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="0dp"
+                        app:cardBackgroundColor="@color/grey_F3F3"
+                        >
+
+                        <com.bravo.android.bravo.util.richeditor.RichEditor
+                            android:id="@+id/editor"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginEnd="24dp"
+                            android:layout_marginTop="24dp"
+                            android:layout_marginBottom="24dp"
+                            />
+
+
+                    </androidx.cardview.widget.CardView>
+<!--                    <androidx.appcompat.widget.AppCompatEditText-->
+<!--                        android:id="@+id/et_content"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="246dp"-->
+<!--                        android:hint="브라보 친구들과 함께 하고 싶은 활동에 대해 설명해주세요"-->
+<!--                        android:textSize="18dp"-->
+<!--                        android:text="@={vm.content}"-->
+<!--                        android:imeOptions="actionDone"-->
+<!--                        android:gravity="center_horizontal|start"-->
+<!--                        android:layout_marginStart="24dp"-->
+<!--                        android:layout_marginEnd="24dp"-->
+<!--                        android:layout_marginTop="16dp"-->
+
+<!--                        android:background="@drawable/bg_grey_radius_10dp"-->
+<!--                        />-->
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="24dp"
+                        android:orientation="horizontal"
+                        >
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="26dp"
+                            android:textColor="@color/black"
+                            android:text="사진 첨부("
+                        />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="26dp"
+                            android:textColor="@color/black"
+                            android:text="@{Integer.toString(vm.listUrl.size())}"
+                            />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="26dp"
+                            android:textColor="@color/black"
+                            android:text="/10)"
+                            />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="32dp"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginEnd="24dp"
+                        >
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_together_image"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="2dp"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                            />
+
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_next"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:text="다음"
+                        android:textSize="22dp"
+                        android:onClick="@{() -> vm.setOnNextAction()}"
+                        android:gravity="center"
+                        android:padding="15dp"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginEnd="24dp"
+                        android:layout_marginTop="40dp"
+                        android:background="@drawable/bg_purple_radius_8dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_finish"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/purple_6e32"
+                        android:text="작성 취소"
+                        android:textSize="22dp"
+                        android:gravity="center"
+                        android:padding="15dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginEnd="24dp"
+                        android:layout_marginBottom="30dp"
+                        android:background="@drawable/bg_white_stroke_purple_10dp_radius"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        />
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+            </androidx.core.widget.NestedScrollView>
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

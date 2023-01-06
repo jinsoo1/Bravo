@@ -1,0 +1,587 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="vm"
+            type="com.bravo.android.bravo.ui.view.main.community.together.fragment.fifth.TogetherFifthViewModel" />
+
+        <import type="com.bravo.android.bravo.util.ext.StringExt"/>
+        <import type="android.view.View"/>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_title"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:background="@color/purple_6e32"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            >
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_num1"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/ic__back__appbar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_fifth"
+                app:layout_constraintBottom_toBottomOf="@id/tv_fifth"
+                app:layout_constraintEnd_toStartOf="@id/iv_arrow1"
+                />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_arrow1"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:src="@drawable/ic__back__appbar"
+                app:layout_constraintStart_toEndOf="@id/iv_num1"
+                app:layout_constraintTop_toTopOf="@id/tv_fifth"
+                app:layout_constraintBottom_toBottomOf="@id/tv_fifth"
+                app:layout_constraintEnd_toStartOf="@id/iv_num2"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_num2"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/ic__back__appbar"
+                app:layout_constraintStart_toEndOf="@id/iv_arrow1"
+                app:layout_constraintTop_toTopOf="@id/tv_fifth"
+                app:layout_constraintBottom_toBottomOf="@id/tv_fifth"
+                app:layout_constraintEnd_toStartOf="@id/iv_arrow2"
+                />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_arrow2"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:src="@drawable/ic__back__appbar"
+                app:layout_constraintStart_toEndOf="@id/iv_num2"
+                app:layout_constraintTop_toTopOf="@id/tv_fifth"
+                app:layout_constraintBottom_toBottomOf="@id/tv_fifth"
+                app:layout_constraintEnd_toStartOf="@id/iv_num3"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_num3"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/ic__back__appbar"
+                app:layout_constraintStart_toEndOf="@id/iv_arrow2"
+                app:layout_constraintTop_toTopOf="@id/tv_fifth"
+                app:layout_constraintBottom_toBottomOf="@id/tv_fifth"
+                app:layout_constraintEnd_toStartOf="@id/iv_arrow3"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_arrow3"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:src="@drawable/ic__back__appbar"
+                app:layout_constraintStart_toEndOf="@id/iv_num3"
+                app:layout_constraintTop_toTopOf="@id/tv_fifth"
+                app:layout_constraintBottom_toBottomOf="@id/tv_fifth"
+                app:layout_constraintEnd_toStartOf="@id/iv_num4"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_num4"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/ic__back__appbar"
+                app:layout_constraintStart_toEndOf="@id/iv_arrow3"
+                app:layout_constraintTop_toTopOf="@id/tv_fifth"
+                app:layout_constraintBottom_toBottomOf="@id/tv_fifth"
+                app:layout_constraintEnd_toEndOf="@id/iv_arrow4"
+                />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_arrow4"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:src="@drawable/ic__back__appbar"
+                app:layout_constraintStart_toEndOf="@id/iv_num4"
+                app:layout_constraintTop_toTopOf="@id/tv_fifth"
+                app:layout_constraintBottom_toBottomOf="@id/tv_fifth"
+                app:layout_constraintEnd_toStartOf="@id/tv_fifth"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_fifth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="24dp"
+                android:text="5단계"
+                app:layout_constraintStart_toEndOf="@+id/iv_arrow4"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/grey_eaea"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_title"
+            app:layout_constraintVertical_bias="0.0">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="26dp"
+                    android:text="활동 일정"
+                    android:textColor="@color/black"
+                    android:textSize="26dp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="26dp"
+                    android:text="활동주기"
+                    android:textColor="@color/black"
+                    android:textSize="24dp" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="24dp"
+                    android:background="@drawable/bg_grey_radius_10dp"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:weightSum="3">
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:checked="@{vm.activityState == false ? true : false}"
+                            android:onClick="@{() -> vm.setOnActivityState(false)}"
+                            android:text="일회성"
+                            android:textColor="@color/grey_5959"
+                            android:textSize="24dp" />
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:checked="@{vm.activityState == true ? true : false}"
+                            android:onClick="@{() -> vm.setOnActivityState(true)}"
+                            android:text="정기활동"
+                            android:textColor="@color/grey_5959"
+                            android:textSize="24dp" />
+
+                    </RadioGroup>
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="24dp"
+                    android:orientation="horizontal"
+                    android:visibility="@{vm.activityState == false ? View.VISIBLE : View.GONE}"
+                    android:weightSum="3">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="6dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_grey_radius_10dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:weightSum="3">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="24dp"
+                            android:layout_weight="1"
+                            android:onClick="@{() -> vm.onMonthPlus()}"
+                            android:src="@drawable/ic_test_icon" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="24dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@{@string/month(vm.month)}"
+                            android:textColor="@color/grey_5959"
+                            android:textSize="24dp" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="24dp"
+                            android:layout_marginBottom="16dp"
+                            android:layout_weight="1"
+                            android:onClick="@{() -> vm.onMonthMinus()}"
+                            android:src="@drawable/ic_test_icon" />
+
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginEnd="6dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_grey_radius_10dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:weightSum="3">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="24dp"
+                            android:layout_weight="1"
+                            android:onClick="@{() -> vm.onDayPlus()}"
+                            android:src="@drawable/ic_test_icon" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="24dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@{@string/day(vm.day)}"
+                            android:textColor="@color/grey_5959"
+                            android:textSize="24dp" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="24dp"
+                            android:layout_marginBottom="16dp"
+                            android:layout_weight="1"
+                            android:onClick="@{() -> vm.onDayMinus()}"
+                            android:src="@drawable/ic_test_icon" />
+
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_grey_radius_10dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:weightSum="3">
+
+                        <androidx.constraintlayout.utils.widget.ImageFilterView
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="24dp"
+                            android:layout_weight="1"
+                            android:onClick="@{() -> vm.onTimePlus()}"
+                            android:src="@drawable/ic_test_icon" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@{StringExt.INSTANCE.settingTime(vm.time)}"
+                            android:textColor="@color/grey_5959"
+                            android:textSize="24dp" />
+
+                        <androidx.constraintlayout.utils.widget.ImageFilterView
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="24dp"
+                            android:layout_marginBottom="16dp"
+                            android:layout_weight="1"
+                            android:onClick="@{() -> vm.onTimeMinus()}"
+                            android:src="@drawable/ic_test_icon" />
+
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="24dp"
+                    android:orientation="vertical"
+                    android:visibility="@{vm.activityState == true ? View.VISIBLE : View.GONE}">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="요일은 5개까지 선택할 수 있어요"
+                        android:textColor="@color/grey_5959"
+                        android:textSize="18dp" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:layout_weight="1"
+                            android:background="@{vm.dayState == false ? @drawable/bg_puple_radius_20dp : @drawable/bg_write_radius_20dp}"
+                            android:gravity="center"
+                            android:paddingStart="55dp"
+                            android:paddingTop="24dp"
+                            android:paddingEnd="55dp"
+                            android:paddingBottom="24dp"
+                            android:text="매일"
+                            android:textSize="22dp"
+                            android:textColor="@{vm.dayState == false ? @color/white : @color/grey_5959}"
+                            android:onClick="@{() -> vm.setOnDayState(false)}"
+                            />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_weight="1"
+                            android:background="@{vm.dayState == true ? @drawable/bg_puple_radius_20dp : @drawable/bg_write_radius_20dp}"
+                            android:gravity="center"
+                            android:paddingStart="36dp"
+                            android:paddingTop="24dp"
+                            android:paddingEnd="36dp"
+                            android:paddingBottom="24dp"
+                            android:text="요일선택"
+                            android:textSize="22dp"
+                            android:textColor="@{vm.dayState == true ? @color/white : @color/grey_5959}"
+                            android:onClick="@{() -> vm.setOnDayState(true)}"
+                            />
+
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="40dp"
+                        android:visibility="@{vm.dayState == true ? View.VISIBLE : View.GONE }"
+                        >
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="8dp"
+                                android:background="@{vm.dayList.contains(`월`) ? @drawable/bg_puple_radius_20dp : @drawable/bg_write_radius_20dp}"
+                                android:paddingStart="32dp"
+                                android:paddingTop="24dp"
+                                android:paddingEnd="32dp"
+                                android:paddingBottom="24dp"
+                                android:text="월"
+                                android:textSize="24dp"
+                                android:onClick="@{() -> vm.setOnDayList(`월`)}"
+                                />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="8dp"
+                                android:background="@{vm.dayList.contains(`화`) ? @drawable/bg_puple_radius_20dp : @drawable/bg_write_radius_20dp}"
+                                android:paddingStart="32dp"
+                                android:paddingTop="24dp"
+                                android:paddingEnd="32dp"
+                                android:paddingBottom="24dp"
+                                android:text="화"
+                                android:textSize="24dp"
+                                android:onClick="@{() -> vm.setOnDayList(`화`)}"
+                                />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="8dp"
+                                android:background="@{vm.dayList.contains(`수`) ? @drawable/bg_puple_radius_20dp : @drawable/bg_write_radius_20dp}"
+                                android:paddingStart="32dp"
+                                android:paddingTop="24dp"
+                                android:paddingEnd="32dp"
+                                android:paddingBottom="24dp"
+                                android:text="수"
+                                android:textSize="24dp"
+                                android:onClick="@{() -> vm.setOnDayList(`수`)}"
+                                />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="8dp"
+                                android:background="@{vm.dayList.contains(`목`) ? @drawable/bg_puple_radius_20dp : @drawable/bg_write_radius_20dp}"
+                                android:paddingStart="32dp"
+                                android:paddingTop="24dp"
+                                android:paddingEnd="32dp"
+                                android:paddingBottom="24dp"
+                                android:text="목"
+                                android:textSize="24dp"
+                                android:onClick="@{() -> vm.setOnDayList(`목`)}"
+                                />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="8dp"
+                                android:background="@{vm.dayList.contains(`금`) ? @drawable/bg_puple_radius_20dp : @drawable/bg_write_radius_20dp}"
+                                android:paddingStart="32dp"
+                                android:paddingTop="24dp"
+                                android:paddingEnd="32dp"
+                                android:paddingBottom="24dp"
+                                android:text="금"
+                                android:textSize="24dp"
+                                android:onClick="@{() -> vm.setOnDayList(`금`)}"
+                                />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="8dp"
+                                android:background="@{vm.dayList.contains(`토`) ? @drawable/bg_puple_radius_20dp : @drawable/bg_write_radius_20dp}"
+                                android:paddingStart="32dp"
+                                android:paddingTop="24dp"
+                                android:paddingEnd="32dp"
+                                android:paddingBottom="24dp"
+                                android:text="토"
+                                android:textSize="24dp"
+                                android:onClick="@{() -> vm.setOnDayList(`토`)}"
+                                />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="8dp"
+                                android:background="@{vm.dayList.contains(`일`) ? @drawable/bg_puple_radius_20dp : @drawable/bg_write_radius_20dp}"
+                                android:paddingStart="32dp"
+                                android:paddingTop="24dp"
+                                android:paddingEnd="32dp"
+                                android:paddingBottom="24dp"
+                                android:text="일"
+                                android:textSize="24dp"
+                                android:onClick="@{() -> vm.setOnDayList(`일`)}"
+                                />
+
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                    </HorizontalScrollView>
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_next"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginEnd="24dp"
+                    android:background="@drawable/bg_purple_radius_8dp"
+                    android:gravity="center"
+                    android:padding="15dp"
+                    android:text="다음"
+                    android:onClick="@{() -> vm.setOnNextAction()}"
+                    android:textColor="@color/white"
+                    android:textSize="22dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_finish"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginBottom="30dp"
+                    android:background="@drawable/bg_white_stroke_purple_10dp_radius"
+                    android:gravity="center"
+                    android:padding="15dp"
+                    android:text="작성 취소"
+                    android:textColor="@color/purple_6e32"
+                    android:textSize="22dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

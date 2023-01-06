@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="vm"
+            type="com.bravo.android.bravo.ui.view.main.community.together.fragment.third.TogetherThirdViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_title"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:background="@color/purple_6e32"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            >
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_num1"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/ic__back__appbar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_third"
+                app:layout_constraintBottom_toBottomOf="@id/tv_third"
+                app:layout_constraintEnd_toStartOf="@id/iv_arrow1"
+                />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_arrow1"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:src="@drawable/ic__back__appbar"
+                app:layout_constraintStart_toEndOf="@id/iv_num1"
+                app:layout_constraintTop_toTopOf="@id/tv_third"
+                app:layout_constraintBottom_toBottomOf="@id/tv_third"
+                app:layout_constraintEnd_toStartOf="@id/iv_num2"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_num2"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/ic__back__appbar"
+                app:layout_constraintStart_toEndOf="@id/iv_arrow1"
+                app:layout_constraintTop_toTopOf="@id/tv_third"
+                app:layout_constraintBottom_toBottomOf="@id/tv_third"
+                app:layout_constraintEnd_toStartOf="@id/iv_arrow2"
+                />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_arrow2"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:src="@drawable/ic__back__appbar"
+                app:layout_constraintStart_toEndOf="@id/iv_num2"
+                app:layout_constraintTop_toTopOf="@id/tv_third"
+                app:layout_constraintBottom_toBottomOf="@id/tv_third"
+                app:layout_constraintEnd_toStartOf="@id/tv_third"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_third"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="24dp"
+                android:text="3단계"
+                app:layout_constraintStart_toEndOf="@+id/iv_arrow2"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/iv_arrow3"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_arrow3"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:src="@drawable/ic__back__appbar"
+                app:layout_constraintStart_toEndOf="@id/tv_third"
+                app:layout_constraintTop_toTopOf="@id/tv_third"
+                app:layout_constraintBottom_toBottomOf="@id/tv_third"
+                app:layout_constraintEnd_toStartOf="@id/iv_num4"
+                />
+
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_num4"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/ic__back__appbar"
+                app:layout_constraintStart_toEndOf="@id/iv_arrow3"
+                app:layout_constraintTop_toTopOf="@id/tv_third"
+                app:layout_constraintBottom_toBottomOf="@id/tv_third"
+                app:layout_constraintEnd_toStartOf="@id/iv_arrow4"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_arrow4"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:src="@drawable/ic__back__appbar"
+                app:layout_constraintStart_toEndOf="@id/iv_num4"
+                app:layout_constraintTop_toTopOf="@id/tv_third"
+                app:layout_constraintBottom_toBottomOf="@id/tv_third"
+                app:layout_constraintEnd_toStartOf="@id/iv_num5"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_num5"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/ic__back__appbar"
+                app:layout_constraintStart_toEndOf="@id/iv_arrow4"
+                app:layout_constraintTop_toTopOf="@id/tv_third"
+                app:layout_constraintBottom_toBottomOf="@id/tv_third"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/grey_eaea"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_title"
+            app:layout_constraintBottom_toBottomOf="parent"
+            >
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:text="활동 인원수 / 지역"
+                    android:textSize="26dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="26dp"
+                    />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="24dp"
+                    android:text="인원"
+                    android:layout_marginTop="26dp"
+                    android:layout_marginStart="24dp"
+                    />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="3"
+                    android:orientation="horizontal"
+                    android:background="@drawable/bg_grey_radius_10dp"
+                    android:padding="16dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginTop="16dp"
+                    >
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/ic_test_icon"
+                        android:layout_weight="1"
+                        android:onClick="@{() -> vm.peopleNumMinus()}"
+                        />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:textSize="24dp"
+                        android:text="@{@string/number_people(vm.peopleNum)}"
+                        />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/ic_test_icon"
+                        android:layout_weight="1"
+                        android:onClick="@{() -> vm.peopleNumPlus()}"
+                        />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="24dp"
+                    android:text="지역"
+                    android:layout_marginTop="26dp"
+                    android:layout_marginStart="24dp"
+                    />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="3"
+                    android:orientation="horizontal"
+                    android:background="@drawable/bg_grey_radius_10dp"
+                    android:padding="16dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginTop="16dp"
+                    >
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        >
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="오프라인"
+                            android:textSize="24dp"
+                            android:textColor="@color/grey_5959"
+                            android:onClick="@{() -> vm.setLocation(false)}"
+                            android:checked="@{vm.location == false ? true : false}"
+                            />
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="온라인"
+                            android:textSize="24dp"
+                            android:textColor="@color/grey_5959"
+                            android:onClick="@{() -> vm.setLocation(true)}"
+                            android:checked="@{vm.location == true ? true : false}"
+                            />
+
+                    </RadioGroup>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_next"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="다음"
+                    android:textSize="22dp"
+                    android:onClick="@{() -> vm.setOnNextAction()}"
+                    android:gravity="center"
+                    android:padding="15dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/bg_purple_radius_8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_finish"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/purple_6e32"
+                    android:text="작성 취소"
+                    android:textSize="22dp"
+                    android:gravity="center"
+                    android:padding="15dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginBottom="30dp"
+                    android:background="@drawable/bg_white_stroke_purple_10dp_radius"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    />
+
+
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
