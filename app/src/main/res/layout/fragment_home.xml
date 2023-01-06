@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
 
     </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,7 +19,8 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="56dp"
+            android:gravity="center"
             android:orientation="horizontal">
 
             <ImageView
@@ -32,46 +38,259 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_test_icon"
-                android:layout_marginRight="10dp"/>
+                android:src="@drawable/ic_test_icon"/>
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    android:id="@+id/tvName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="이미진"
+                    android:textSize="24dp"
+                    android:fontFamily="@font/font_medium"
+                    android:textColor="@color/grey_3F3F"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="님을 위한"
+                    android:textSize="24dp"
+                    android:fontFamily="@font/font_medium"
+                    android:textColor="@color/grey_3F3F"/>
+
+            </LinearLayout>
 
             <TextView
-                android:id="@+id/tvName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="이미진"
-                android:fontFamily="@font/font_medium"
-                android:textColor="@color/grey_3F3F"/>
+                android:text="오늘의 좋은 글 편지"
+                android:textSize="30dp"
+                android:fontFamily="@font/font_bold"
+                android:textColor="@color/grey_2f2f"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="님을 위한"
-                android:fontFamily="@font/font_medium"
-                android:textColor="@color/grey_3F3F"/>
+            <androidx.viewpager2.widget.ViewPager2
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </androidx.viewpager2.widget.ViewPager2>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@drawable/bg_green_radius_48dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="힐링정보 더 보기"
+                    android:textColor="@color/white"
+                    android:textSize="22dp"
+                    android:fontFamily="@font/font_bold"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_weight="1"/>
+
+
+            </LinearLayout>
 
         </LinearLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="오늘의 좋은 글 편지"
-            android:textSize="30dp"
-            android:fontFamily="@font/font_bold"
-            android:textColor="@color/grey_2f2f"/>
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="우리들의"
+                    android:textSize="24dp"
+                    android:fontFamily="@font/font_medium"
+                    android:textColor="@color/grey_3F3F"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="사는 일상 이야기"
+                android:textSize="30dp"
+                android:fontFamily="@font/font_bold"
+                android:textColor="@color/grey_2f2f"/>
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </androidx.viewpager2.widget.ViewPager2>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@drawable/bg_green_radius_48dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="우리들 이야기 더 보기"
+                    android:textColor="@color/white"
+                    android:textSize="22dp"
+                    android:fontFamily="@font/font_bold"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_weight="1"/>
 
 
+            </LinearLayout>
 
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    android:id="@+id/tvName2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="이미진"
+                    android:textSize="24dp"
+                    android:fontFamily="@font/font_medium"
+                    android:textColor="@color/grey_3F3F"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="님께 필요한 모든 것 "
+                    android:textSize="24dp"
+                    android:fontFamily="@font/font_medium"
+                    android:textColor="@color/grey_3F3F"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="브라보 마켓"
+                android:textSize="30dp"
+                android:fontFamily="@font/font_bold"
+                android:textColor="@color/grey_2f2f"/>
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </androidx.viewpager2.widget.ViewPager2>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@drawable/bg_green_radius_48dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="브라보 마켓 더 보기"
+                    android:textColor="@color/white"
+                    android:textSize="22dp"
+                    android:fontFamily="@font/font_bold"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_weight="1"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="친구들과 공유해봐요"
+                    android:textSize="24dp"
+                    android:fontFamily="@font/font_medium"
+                    android:textColor="@color/grey_3F3F"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="각종 테스트트"
+                android:textSize="30dp"
+               android:fontFamily="@font/font_bold"
+                android:textColor="@color/grey_2f2f"/>
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </androidx.viewpager2.widget.ViewPager2>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@drawable/bg_green_radius_48dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="테스트 더 보기"
+                    android:textColor="@color/white"
+                    android:textSize="22dp"
+                    android:fontFamily="@font/font_bold"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_weight="1"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
 
 
     </LinearLayout>
-        
+
+    </androidx.core.widget.NestedScrollView>
 
 </layout>

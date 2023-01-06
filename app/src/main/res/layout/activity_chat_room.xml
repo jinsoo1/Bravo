@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_btn_back_black"
+            android:layout_marginLeft="36dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvChatTitle" />
+
+        <TextView
+            android:id="@+id/tvChatTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/font_extrabold"
+            android:gravity="center"
+            android:text="테스트방"
+            android:textColor="#1E1E1E"
+            android:textSize="24dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/font_regular"
+            android:text="5"
+            android:textColor="#595959"
+            android:textSize="20dp"
+            android:layout_marginLeft="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvChatTitle"
+            app:layout_constraintStart_toEndOf="@+id/tvChatTitle"
+            app:layout_constraintTop_toTopOf="@+id/tvChatTitle" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="25dp"
+            android:src="@drawable/ic_btn_set_appbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvChatTitle" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvChatList"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvChatTitle" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

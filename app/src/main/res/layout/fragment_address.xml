@@ -43,7 +43,7 @@
             android:layout_height="wrap_content"
             android:text="주소를 입력하고\n동네 친구들을 만나보세요."
             android:textColor="@color/white"
-            android:fontFamily="@font/font_bold"
+            android:fontFamily="@font/font_extrabold"
             android:textSize="30dp"/>
 
         <LinearLayout
@@ -58,14 +58,21 @@
             android:orientation="horizontal">
 
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/purple_b496"
+                android:textColor="#B496FF"
                 android:hint="시,도를 선택 해 주세요"
-                android:textColor="@color/white"
-                android:fontFamily="@font/font_medium"
                 android:textColorHint="@color/purple_b496"
-                android:textSize="24dp" />
+                android:fontFamily="@font/font_semibold"
+                android:textSize="24dp"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_img_arrow_down"
+                android:layout_gravity="center"/>
 
         </LinearLayout>
 
@@ -94,14 +101,22 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/purple_b496"
-                    android:fontFamily="@font/font_medium"
-                    android:hint="시,군,구를 선택 해 주세요"
-                    android:textColor="@color/white"
+                    android:fontFamily="@font/font_semibold"
+                    android:text="시,군,구를 선택 해 주세요"
+                    android:textColor="#B496FF"
+                    android:textSize="24dp"
+                    android:hint="시,도를 선택 해 주세요"
                     android:textColorHint="@color/purple_b496"
-                    android:textSize="24dp" />
+                    android:layout_weight="1"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_img_arrow_down"
+                    android:layout_gravity="center"/>
 
             </LinearLayout>
 

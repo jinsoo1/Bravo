@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvInquiryList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+
+    </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/bg_stroke_purple_6e32_radius_8dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="20dp"
+            android:layout_gravity="bottom"
+            android:text="1:1 문의가 등록되었습니다"
+            android:textSize="16dp"
+            android:textColor="@color/purple_6e32"
+            android:fontFamily="@font/font_regular"
+            android:gravity="center"/>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</layout>

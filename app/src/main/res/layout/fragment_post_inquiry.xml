@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="30dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="문의 카테고리 선택"
+            android:fontFamily="@font/font_semibold"
+            android:textSize="24dp"
+            android:textColor="@color/grey_2f2f"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@drawable/bg_gray_f3f3_radius_16dp"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="문의 유형을 선택해주세요"
+                    android:layout_gravity="center"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="10dp"
+                    android:textSize="18dp"
+                    android:fontFamily="@font/font_semibold"
+                    android:textColorHint="#D6D6D6"
+                    android:layout_weight="1"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_arrow_down_line_black"
+                    android:layout_gravity="center"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="문의내용 작성"
+        android:fontFamily="@font/font_semibold"
+        android:textSize="24dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="25dp"
+        android:textColor="@color/grey_2f2f"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:background="@drawable/bg_gray_f3f3_radius_16dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/font_regular"
+                android:gravity="start"
+                android:hint="브라보 서비스를 이용하시면서 불편하셨던 점이나 궁금한 점을 적어주세요. 문의 내용과 관련된 사진을 함께 첨부해주시면, 더 정확한 답변을 드리는데 도움이 됩니다."
+                android:padding="18dp"
+                android:textColor="@color/grey_2f2f"
+                android:textColorHint="#D6D6D6"
+                android:textSize="18dp" />
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="25dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="사진첨부"
+            android:fontFamily="@font/font_semibold"
+            android:textSize="24dp"
+            android:textColor="@color/grey_2f2f"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" ("
+            android:fontFamily="@font/font_semibold"
+            android:textSize="24dp"
+            android:textColor="@color/grey_2f2f"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:fontFamily="@font/font_semibold"
+            android:textSize="24dp"
+            android:textColor="@color/grey_2f2f"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/"
+            android:fontFamily="@font/font_semibold"
+            android:textSize="24dp"
+            android:textColor="@color/grey_2f2f"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10"
+            android:fontFamily="@font/font_semibold"
+            android:textSize="24dp"
+            android:textColor="@color/grey_2f2f"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=")"
+            android:fontFamily="@font/font_semibold"
+            android:textSize="24dp"
+            android:textColor="@color/grey_2f2f"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/imageListLayout"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1:1 문의는 24시간 접수 가능하며,\n순차적으로 답변드리고 있습니다.\n문의사항을 남겨주시면 최대한 빠르고 정확하게 안내드리겠습니다."
+        android:fontFamily="@font/font_regular"
+        android:textSize="20dp"
+        android:textColor="#595959"
+        android:paddingRight="25dp"
+        android:paddingLeft="25dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:background="#F3F3F3"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@drawable/bg_purple_radius_8dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="25dp"
+        android:fontFamily="@font/font_semibold"
+        android:text="다음"
+        android:textSize="22dp"
+        android:textColor="@color/white"
+        android:layout_gravity="center"
+        android:gravity="center"/>
+
+    </LinearLayout>
+
+</layout>

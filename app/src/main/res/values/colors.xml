@@ -74,6 +74,9 @@
     <color name="black_1616">#161616</color>
     <color name="grey_2f2f">#2F2F2F</color>
     <color name="grey_3F3F">#3F3F3F</color>
+    <color name="grey_1E1E">#1E1E1E</color>
+    <color name="grey_F3F3">#F3F3F3</color>
+    <color name="grey_b4b4">#B4B4B4</color>
 
 
 </resources>
