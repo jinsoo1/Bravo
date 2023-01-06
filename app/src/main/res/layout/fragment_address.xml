@@ -48,13 +48,13 @@
 
                 </LinearLayout>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="주소를 입력하고\n동네 친구들을 만나보세요."
-                    android:textColor="@color/white"
-                    android:fontFamily="@font/font_bold"
-                    android:textSize="30dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="주소를 입력하고\n동네 친구들을 만나보세요."
+            android:textColor="@color/white"
+            android:fontFamily="@font/font_extrabold"
+            android:textSize="30dp"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -75,17 +75,23 @@
                             android:hint="시,도를 선택 해 주세요"
                             android:textColor="@color/white"
                             android:text="@={vm.city}"
-                            android:fontFamily="@font/font_medium"
+                            android:fontFamily="@font/font_semibold"
                             android:textColorHint="@color/purple_b496"
                             android:textSize="24dp" />
 
-                    </LinearLayout>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_img_arrow_down"
+                            android:layout_gravity="center"/>
 
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:layout_marginTop="10dp"
-                        android:background="@color/purple_b496"/>
+        </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/purple_b496"/>
 
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/rv_city"
@@ -94,53 +100,58 @@
                         android:layout_height="200dp"
                         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
-                </LinearLayout>
+        </LinearLayout>
 
-                <LinearLayout
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:visibility="@{vm.city == null ? View.GONE : View.VISIBLE}"
+            android:layout_marginTop="30dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_region"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_weight="1"
-                    android:visibility="@{vm.city == null ? View.GONE : View.VISIBLE}"
-                    android:layout_marginTop="30dp">
+                    android:backgroundTint="@color/purple_b496"
+                    android:fontFamily="@font/font_semibold"
+                    android:hint="시,군,구를 선택 해 주세요"
+                    android:text="@{vm.region.region}"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/purple_b496"
+                    android:textSize="24dp" />
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:id="@+id/tv_region"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:backgroundTint="@color/purple_b496"
-                            android:fontFamily="@font/font_medium"
-                            android:hint="시,군,구를 선택 해 주세요"
-                            android:text="@{vm.region.region}"
-                            android:textColor="@color/white"
-                            android:textColorHint="@color/purple_b496"
-                            android:textSize="24dp" />
-
-                    </LinearLayout>
-
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:layout_marginTop="10dp"
-                        android:background="@color/purple_b496"/>
-
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/rv_district"
-                        android:layout_width="match_parent"
-                        android:layout_height="200dp"
-                        bindRegionList="@{vm.addressRegion}"
-                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                        />
-
-                </LinearLayout>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_img_arrow_down"
+                    android:layout_gravity="center"/>
 
             </LinearLayout>
-        </androidx.core.widget.NestedScrollView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/purple_b496"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_district"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                bindRegionList="@{vm.addressRegion}"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
 
     <TextView
         android:id="@+id/btnNext"
@@ -153,9 +164,8 @@
         android:layout_gravity="center"
         android:gravity="center"
         android:background="@drawable/btn_next_green37bc"
-        android:layout_marginTop="10dp"
         android:layout_marginBottom="20dp"
-        android:onClick="@{() -> vm.next()}"/>
+        android:onClick="@{() -> vm.next}"/>
 
 
     </LinearLayout>

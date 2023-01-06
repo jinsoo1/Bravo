@@ -1,6 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/nav_graph_mypage">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_mypage"
+    app:startDestination="@id/myPageNavFragment">
+
+    <fragment
+        android:id="@+id/myPageNavFragment"
+        android:name="com.bravo.android.bravo.ui.view.mypage.MyPageNavFragment"
+        android:label="MyPageNavFragment">
+
+        <action
+            android:id="@+id/action_myPageNavFragment_to_settingFragment"
+            app:destination="@id/settingFragment"/>
+
+        <action
+            android:id="@+id/action_myPageNavFragment_to_termsFragment"
+            app:destination="@id/termsFragment"/>
+
+        <action
+            android:id="@+id/action_myPageNavFragment_to_postFragment"
+            app:destination="@id/postFragment"/>
+
+        <action
+            android:id="@+id/action_myPageNavFragment_to_informationFragment"
+            app:destination="@id/informationFragment"/>
+
+        <action
+            android:id="@+id/action_myPageNavFragment_to_followFragment"
+            app:destination="@id/followFragment"/>
+
+        <action
+            android:id="@+id/action_myPageNavFragment_to_blockFragment"
+            app:destination="@id/blockFragment"/>
+
+    </fragment>
+
+    <fragment android:id="@+id/settingFragment"
+        android:name="com.bravo.android.bravo.ui.view.mypage.setting.SettingFragment"
+        android:label="SettingFragment">
+
+        <action
+            android:id="@+id/action_settingFragment_to_myPageFragment"
+            app:destination="@+id/myPageNavFragment"/>
+
+    </fragment>
+
+    <fragment android:id="@+id/termsFragment"
+        android:name="com.bravo.android.bravo.ui.view.mypage.terms.TermsFragment"
+        android:label="TermsFragment">
+
+        <action
+            android:id="@+id/action_termsFragment_to_myPageFragment"
+            app:destination="@+id/myPageNavFragment"/>
+
+    </fragment>
+
+    <fragment android:id="@+id/postFragment"
+        android:name="com.bravo.android.bravo.ui.view.mypage.mypost.PostFragment"
+        android:label="PostFragment">
+
+        <action
+            android:id="@+id/action_postFragment_to_myPageFragment"
+            app:destination="@+id/myPageNavFragment"/>
+
+    </fragment>
+
+    <fragment android:id="@+id/informationFragment"
+        android:name="com.bravo.android.bravo.ui.view.mypage.information.InformationFragment"
+        android:label="InformationFragment">
+
+        <action
+            android:id="@+id/action_informationFragment_to_myPageFragment"
+            app:destination="@+id/myPageNavFragment"/>
+
+    </fragment>
+
+    <fragment android:id="@+id/followFragment"
+        android:name="com.bravo.android.bravo.ui.view.mypage.follow.FollowFragment"
+        android:label="FollowFragment">
+
+        <action
+            android:id="@+id/action_followFragment_to_myPageFragment"
+            app:destination="@+id/myPageNavFragment"/>
+
+    </fragment>
+
+    <fragment android:id="@+id/blockFragment"
+        android:name="com.bravo.android.bravo.ui.view.mypage.block.BlockFragment"
+        android:label="BlockFragment">
+
+        <action
+            android:id="@+id/action_blockFragment_to_myPageFragment"
+            app:destination="@+id/myPageNavFragment"/>
+
+    </fragment>
 
 </navigation>

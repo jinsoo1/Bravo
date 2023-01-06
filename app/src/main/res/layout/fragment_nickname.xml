@@ -13,8 +13,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:paddingRight="20dp"
-        android:paddingLeft="20dp"
+        android:paddingRight="25dp"
+        android:paddingLeft="25dp"
         android:background="@color/purple_6e32">
 
         <LinearLayout
@@ -25,9 +25,9 @@
 
             <ImageView
                 android:id="@+id/btnBack"
-                android:layout_width="30dp"
-                android:layout_height="50dp"
-                android:src="@drawable/ic__back__appbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_btn_back"
                 />
 
         </LinearLayout>
@@ -37,12 +37,14 @@
             android:layout_height="wrap_content"
             android:text="브라보에서 사용하실\n별명을 입력해주세요."
             android:textColor="@color/white"
+            android:fontFamily="@font/font_extrabold"
             android:textSize="30dp"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="별명"
+            android:fontFamily="@font/font_semibold"
             android:textColor="@color/purple_b496"
             android:layout_marginTop="30dp"
             android:textSize="18dp"/>
@@ -59,11 +61,26 @@
                 android:backgroundTint="@color/purple_b496"
                 android:maxLength="5"
                 android:maxLines="1"
+                android:hint="별명을 입력해주세요"
                 android:text="@={vm.nickname}"
                 android:textColor="@color/white"
+                android:fontFamily="@font/font_semibold"
                 android:textSize="24dp" />
 
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_btn_delete"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"/>
+
         </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/white"
+            android:layout_marginTop="12dp"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -80,7 +97,10 @@
 
             <ImageView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_img_notice"
+                android:layout_gravity="center"
+                />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -88,6 +108,8 @@
                 android:layout_weight="1"
                 android:text="별명은 한글, 영어, 숫자만 사용할 수 있어요 (5글자 이내)"
                 android:textSize="20dp"
+                android:fontFamily="@font/font_regular"
+                android:layout_marginLeft="10dp"
                 android:textColor="@color/white"/>
 
         </LinearLayout>
@@ -100,7 +122,9 @@
 
             <ImageView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_img_notice"
+                android:layout_gravity="center"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -108,6 +132,8 @@
                 android:layout_weight="1"
                 android:textSize="20dp"
                 android:textColor="@color/white"
+                android:fontFamily="@font/font_regular"
+                android:layout_marginLeft="10dp"
                 android:text="설정한 별명은 프로필 수정하기를 통해 변경할 수 있어요"/>
 
         </LinearLayout>
@@ -123,9 +149,10 @@
             android:textColor="@color/white"
             android:layout_gravity="center"
             android:gravity="center"
+            android:fontFamily="@font/font_bold"
             android:background="@drawable/btn_next_green37bc"
             android:layout_marginBottom="20dp"
-            android:onClick="@{() -> vm.next()}"/>
+            android:onClick="@{() -> vm.next}"/>
 
 
     </LinearLayout>
