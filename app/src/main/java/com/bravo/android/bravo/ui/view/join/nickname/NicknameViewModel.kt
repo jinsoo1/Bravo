@@ -18,7 +18,7 @@ class NicknameViewModel(
     private val _nickname : MutableLiveData<String> = MutableLiveData()
     val nickname : MutableLiveData<String> get() = _nickname
 
-    fun next(){
+    fun onNext(){
         action.value = Event(NicknameActions.NEXT)
     }
 

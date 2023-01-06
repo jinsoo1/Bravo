@@ -52,7 +52,7 @@ class AddressViewModel(
         )
     }
 
-    fun next(){
+    fun onNext(){
         action.value = Event(AddressActions.NEXT)
     }
 

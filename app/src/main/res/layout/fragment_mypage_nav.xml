@@ -55,7 +55,7 @@
                 android:layout_marginRight="24dp"
                 android:src="@drawable/btn_setting"
                 android:layout_gravity="center_vertical"
-                android:onClick="@{() -> vm.}"/>
+                />
 
         </LinearLayout>
 

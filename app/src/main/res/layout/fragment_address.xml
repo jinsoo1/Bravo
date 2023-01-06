@@ -48,13 +48,13 @@
 
                 </LinearLayout>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="주소를 입력하고\n동네 친구들을 만나보세요."
-            android:textColor="@color/white"
-            android:fontFamily="@font/font_extrabold"
-            android:textSize="30dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="주소를 입력하고\n동네 친구들을 만나보세요."
+                android:textColor="@color/white"
+                android:fontFamily="@font/font_extrabold"
+                android:textSize="30dp"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -85,24 +85,24 @@
                             android:src="@drawable/ic_img_arrow_down"
                             android:layout_gravity="center"/>
 
-        </LinearLayout>
+                    </LinearLayout>
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="10dp"
-                android:background="@color/purple_b496"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/purple_b496"/>
 
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/rv_city"
-                        bindCityList="@{vm.addressCity}"
-                        android:layout_width="match_parent"
-                        android:layout_height="200dp"
-                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_city"
+                    bindCityList="@{vm.addressCity}"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
-        </LinearLayout>
+            </LinearLayout>
 
-        <LinearLayout
+            <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -149,23 +149,24 @@
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 />
 
-        </LinearLayout>
+            </LinearLayout>
 
-    </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+        <TextView
+            android:id="@+id/btnNext"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:fontFamily="@font/font_bold"
+            android:text="다음"
+            android:textSize="22dp"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@drawable/btn_next_green37bc"
+            android:layout_marginBottom="20dp"
+            android:onClick="@{() -> vm.onNext()}"/>
 
-    <TextView
-        android:id="@+id/btnNext"
-        android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:fontFamily="@font/font_bold"
-        android:text="다음"
-        android:textSize="22dp"
-        android:textColor="@color/white"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:background="@drawable/btn_next_green37bc"
-        android:layout_marginBottom="20dp"
-        android:onClick="@{() -> vm.next}"/>
 
 
     </LinearLayout>

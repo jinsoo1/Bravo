@@ -237,7 +237,7 @@
                 android:gravity="center"
                 android:background="@drawable/btn_next_green37bc"
                 android:layout_marginBottom="20dp"
-                android:onClick="@{() -> vm.next}"/>
+                android:onClick="@{() -> vm.onNext()}"/>
 
 
         </LinearLayout>

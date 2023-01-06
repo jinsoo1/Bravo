@@ -70,9 +70,9 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_btn_delete"
                 android:layout_gravity="center"
-                android:layout_marginLeft="5dp"/>
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/ic_btn_delete" />
 
         </RelativeLayout>
 
@@ -152,7 +152,7 @@
             android:fontFamily="@font/font_bold"
             android:background="@drawable/btn_next_green37bc"
             android:layout_marginBottom="20dp"
-            android:onClick="@{() -> vm.next}"/>
+            android:onClick="@{() -> vm.onNext()}"/>
 
 
     </LinearLayout>
